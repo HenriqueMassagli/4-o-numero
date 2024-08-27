@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-Br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex & Responsividade</title>
+
+    <style>
+
+        body {
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            padding: 0;
+            margin: 0;
+            height: 100vh;
+
+        }
+
+
+        .box {
+            display: flex;
+            width: 20vw;
+            height: 20vh;
+            justify-content: center;
+            align-items: center;
+            font-family: "Courier New", Courier, monospace;
+            color: black;
+            transition: transform 0.5s, box-shadow 0.5s, border-radius 0.5s;
+            cursor: pointer;
+            margin: 10px;
+            font-size: 20px;
+
+        }
+
+
+        .yellow { background-color: yellow; }
+        .red { background-color: red; }
+        .green { background-color: green; }
+        .blue { background-color: blue; }
+
+
+        .box:hover {
+            transform: scale(1.1);
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+            border-radius: 20px;
+        }
+
+
+        @media (max-width: 768px) {
+            .box {
+                width: 100vw;
+                height: auto;
+                margin: 5px 0;
+            }
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <div class="box yellow">
+        <span>Amarela</span>
+    </div>
+
+
+    <div class="box red">
+        <span>Vermelha</span>
+    </div>
+
+
+    <div class="box green">
+        <span>Verde</span>
+    </div>
+
+
+    <div class="box blue">
+        <span>Azul</span>
+    </div>
+    
+
+</body>
+
+</html>
+
